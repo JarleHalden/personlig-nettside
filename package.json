@@ -1,0 +1,27 @@
+{
+  "name": "personlig-nettside",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+    "build": "tsc",
+    "postbuild": "cp -r src/views dist/views",
+    "start": "node dist/app.js",
+    "css:dev": "postcss src/styles/input.css -o public/css/styles.css --watch",
+    "css:build": "postcss src/styles/input.css -o public/css/styles.css"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.5",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}
